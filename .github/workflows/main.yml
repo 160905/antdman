@@ -19,7 +19,7 @@ jobs:
         run: |
           npm install
           CI=false && npm run build  # 你自己项目的构建命令
-          cp dist/index.html build/404.html # 防止404跳转github的404
+          # cp dist/index.html build/404.html # 防止404跳转github的404
 
       - name: Deploy 🚀 # 部署
         id: 'deploy'
