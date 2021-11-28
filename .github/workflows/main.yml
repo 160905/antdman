@@ -19,7 +19,6 @@ jobs:
         run: |
           npm install
           CI=false && npm run build  # 你自己项目的构建命令
-          # cp dist/index.html build/404.html # 防止404跳转github的404
 
       - name: Deploy 🚀 # 部署
         id: 'deploy'
@@ -27,7 +26,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: static-page # 编译文件分支
-          FOLDER: build # 编译文件的文件夹
+          FOLDER: dist # 编译文件的文件夹
 
       # - name: Send Notification # 发送邮件
       #   uses: dawidd6/action-send-mail@master # 发邮件的插件，打开你小号邮箱的设置界面，开启SMTP服务，记住授权码。
