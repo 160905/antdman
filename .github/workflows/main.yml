@@ -25,8 +25,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3 # 部署到github的静态页，会将打包后的文件推送至下面填写的分支，可以直接新开一个分支用来放打包后的文件
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: static-page # 编译文件分支
-          FOLDER: . # 编译文件的文件夹
+          BRANCH: gh-pages # 编译文件分支
+          FOLDER: ./dist # 编译文件的文件夹
 
       # - name: Send Notification # 发送邮件
       #   uses: dawidd6/action-send-mail@master # 发邮件的插件，打开你小号邮箱的设置界面，开启SMTP服务，记住授权码。
