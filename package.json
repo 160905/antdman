@@ -1,5 +1,6 @@
 {
   "private": true,
+  "homepage": "https://160905.github.io/antdman/",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
